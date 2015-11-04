@@ -1,0 +1,139 @@
+
+% If the calculus has an acronym, define it.
+% (e.g. \newcommand{\LK}{\ensuremath{\mathbf{LK}}\xspace})
+
+\calculusName{System GK}   % The name of the calculus
+\calculusAcronym{\GK}    % The acronym if defined above, or empty otherwise. 
+\calculusLogic{Modal}  % Specify the logic (e.g. classical, intuitionistic, ...) for which this calculus is intended.
+\calculusType{Sequent Calculus}   % Specify the calculus type (e.g. Frege-Hilbert style, tableau, sequent calculus, hypersequent calculus, natural deduction, ...)
+\calculusYear{1998}   % The year when the calculus was invented.
+\calculusAuthor{Hiroakira Ono} % The name(s) of the author(s) of the calculus.
+
+\entryTitle{System GK}        % Title of the entry (usually coincides with the name of the calculus).
+\entryAuthor{Harley Eades III \and Valeria de Paiva} % Your name(s). Separate multiple names with "\and".
+
+% If you wish, use tags to give any other information 
+% that might be helpful for classifying and grouping this entry:
+% e.g. \tag{Two-Sided Sequents}
+% e.g. \tag{Multiset Cedents}
+% e.g. \tag{List Cedents}
+% You are free to invent your own tags. 
+% The Encyclopedia's coordinator will take care of 
+% merging semantically similar tags in the future.
+\tag{Two-Sided Sequents}
+
+\maketitle
+
+% If your files are called "MyProofSystem.tex" and "MyProofSystem.bib", 
+% then you should write "\begin{entry}{MyProofSystem}" in the line below
+\begin{entry}{GK}  
+
+% Define here any newcommands you may need:
+% e.g. \newcommand{\necessarily}{\Box}
+% e.g. \newcommand{\possibly}{\Diamond}
+
+\begin{calculus}
+  \[
+  \begin{array}{lll}
+    \text{Version 0:}\\
+    & \begin{array}{ccc}
+        \infer[\Box]{\Box \Gamma \vdash \Box A}{\Gamma \vdash A}    
+      \end{array}
+    \\\\
+    \text{Version 1:}\\
+    & \begin{array}{ccc}
+        \infer[\Box_l]{\Box A,\Gamma \vdash \Delta}{A,\Gamma \vdash \Delta}
+        & \quad &
+        \infer[\Box_r]{\Box \Gamma \vdash \Box A}{\Box \Gamma \vdash A}
+      \end{array}
+    \\\\
+    \text{Version 2:}\\
+    & \begin{array}{ccc}
+        \infer[\Box_l]{\Box A,\Gamma \vdash \Delta}{A,\Gamma \vdash \Delta}
+        & \quad &
+        \infer[\Box_r]{\Box \Gamma \vdash \Box A,\Box \Delta}{\Box \Gamma \vdash A,\Box \Delta}
+      \end{array}
+  \end{array}
+  \]
+\end{calculus}
+
+% The following sections ("clarifications", "history", 
+% "technicalities") are optional. If you use them, 
+% be very concise and objective. Nevertheless, do write full sentences. 
+% Try to have at most one paragraph per section, because line breaks 
+% do not look nice in a short entry.
+
+\begin{clarifications}
+There are three equivalent versions of system GK \cite{Ono:1998} which
+are extensions of LK \iref{GentzenLK}.  That is, version 0 consists of
+the rules of LK in addition to the rule given above, and similarly for
+the remaining two systems.  Version 2 can derive the rules of version
+1, and version 1 can derive the rules in version 0.  Lastly, $\Gamma$
+and $\Delta$ are multisets of formulas where $\Box \Gamma$
+(resp. $\Box \Delta$) is equivalent to applying $\Box$ to each formula
+in $\Gamma$ (resp. $\Delta$).
+\end{clarifications}
+
+\begin{history}
+%% ToDo: write here short historical remarks about this proof system,
+%% especially if they relate to other proof systems. 
+%% Use "\iref{OtherProofSystem}" to refer to another proof system 
+%% in the Encyclopedia (where "OtherProofSystem" is its ID). 
+%% Use "\irefmissing{SuggestedIDForOtherProofSystem}" to refer to 
+%% another proof system that is not yet available in the encyclopedia.
+
+\end{history}
+
+% General Instructions:
+% =====================
+
+% The preferred length of an entry is 1 page. 
+% Do the best you can to fit your proof system in one page.
+%
+% If you are finding it hard to fit what you want in one page, remember:
+%
+%   * Your entry needs to be neither self-contained nor fully understandable
+%     (the interested reader may consult the cited full paper for details)
+%
+%   * If you are describing several proof systems in one entry, 
+%     consider splitting your entry.
+%
+%   * You may reduce the size of your entry by ommitting inference rules
+%     that are already described in other entries.
+%
+%   * Cite parsimoniously (see detailed citation instructions below).
+%
+% 
+% If you do not manage to fit everything in one page, 
+% it is acceptable for an entry to have 2 pages.
+%
+% For aesthetical reasons, it is preferable for an entry to have
+% 1 full page or 2 full pages, in order to avoid unused blank space.
+
+
+
+% Citation Instructions:
+% ======================
+
+% Please cite the original paper where the proof system was defined.
+% To do so, you may use the \cite command within 
+% one of the optional environments above,
+% or use the \nocite command otherwise.
+
+% You may also cite a modern paper or book where the 
+% proof system is explained in greater depth or clarity.
+% Cite parsimoniously.
+
+% Do not cite related work. Instead, use the "\iref" or "\irefmissing" 
+% commands to make an internal reference to another entry, 
+% as explained within the "history" environment above.
+
+% You do not need to create the "References" section yourself. 
+% This is done automatically.
+
+
+
+
+% Leave an empty line above "\end{entry}".
+
+\end{entry}
