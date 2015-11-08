@@ -89,6 +89,68 @@ together, a tradition that has given us the modal cube below. The
 realization that the basic system should be the system K, named for
 Kripke, only became clear later on. A clear discussion of system K can
 be found in Ono \cite{Ono:1998}.
+
+\begin{figure}
+  \begin{center}
+    \scalebox{0.8}{
+    \begin{tikzpicture}[every node/.style={inner sep=0,outer sep=1}]
+  %% Right node in upper rect.
+  \node[circle,draw,minimum size=4pt,label=T] (P1) at (-1.5,0) {};
+  \node[circle,draw,minimum size=4pt,label=S4] (P2) at (0,1.5) {};
+  %% Left nodes in upper rect.
+  \node[circle,draw,minimum size=4pt,label=120:TB] (P3) at (3.5,0) {};
+  \node[circle,draw,minimum size=4pt,label=S5] (P4) at (5,1.5) {};
+  %% 
+  \node[circle,draw,minimum size=4pt,label=120:K] (P5) at (-1.5,-4.5) {};
+  \node[circle,draw,minimum size=4pt,label=-40:K4] (P6) at (0,-2.5) {};
+  %% 
+  \node[circle,draw,minimum size=4pt,label=120:KB] (P7) at (3.5,-4.5) {};
+  \node[circle,draw,minimum size=4pt,label=30:KB5] (P8) at (5,-2.5) {};
+  %% 
+  \node[circle,draw,minimum size=4pt,label=120:D] (P9) at (-1.5,-2.2) {};
+  \node[circle,draw,minimum size=4pt,label=120:D4] (P10) at (0,-0.8) {};
+
+
+  \node[circle,draw,minimum size=4pt,label=120:K5] (P11) at (1.5,-4.5) {};
+  \node[circle,draw,minimum size=4pt,label=120:D5] (P12) at (1.5,-2.2) {};
+
+  \node[circle,draw,minimum size=4pt,label=140:K45] (P13) at (3,-2.5) {};
+  \node[circle,draw,minimum size=4pt,label=D45] (P14) at (3,-0.8) {};
+
+  \node[circle,draw,minimum size=4pt,label=40:DB] (P15) at (3.5,-2.2) {};
+  
+  \draw (P1) -- (P2);
+  \draw (P2) -- (P4);
+  \draw (P1) -- (P3);
+  \draw (P3) -- (P4);
+
+  \draw (P6) -- (P13) -- (P8);
+  \draw (P5) -- (P6);
+  \draw (P5) -- (P11);
+  \draw (P5) to [out=-30,in=-150] (P7);
+  \draw (P7) -- (P8);
+
+  \draw (P5) -- (P9)  -- (P1);  
+  \draw (P6) -- (P10) -- (P2);
+  \draw (P4) -- (P8);
+  \draw (P3) -- (P15) -- (P7);
+
+  \draw (P9) -- (P10);
+  \draw (P9) -- (P12);
+  \draw (P11) -- (P12);
+  \draw (P11) -- (P13);
+  \draw (P13) -- (P14);
+  \draw (P10) -- (P14);
+  \draw (P12) -- (P14);
+  \draw (P14) to [out=20,in=-110] (P4);
+
+  \draw (P9) to [out=20,in=140] (P15);
+\end{tikzpicture}}
+\end{center}
+  \caption{Modal Cube}
+  \label{fig:modal-cube}
+\end{figure}
+
 \end{history}
 
 % General Instructions:
